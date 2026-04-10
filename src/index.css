@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Outfit:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-handwriting: "Dancing Script", cursive;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-pastel-pink: #fce4ec;
+  --color-pastel-purple: #f3e5f5;
+  --color-pastel-blue: #e1f5fe;
+  --color-warm-sunset: #ffccbc;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-neutral-50 text-neutral-800 antialiased overflow-x-hidden;
+  }
+}
+
+.glass {
+  @apply bg-white/20 backdrop-blur-md border border-white/30;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500;
+}
